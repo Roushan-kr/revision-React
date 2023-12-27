@@ -22,6 +22,18 @@ function App() {
     setCounter(counter-1);
     console.log(counter);
   }
+
+  function runMultiplesameFuncn() {
+    // whan same thing updated again and agin then react make a batch of it whuch futher go throug 
+    // some internal algo check and may got disabled/not reflected 
+    // eg increage counter by 4 by adding 1 to each counter 
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+    setCounter((prevCounter)=> prevCounter+1)
+
+
+  }
   return (
     <>
       <h1>this is my spacce</h1>
@@ -30,6 +42,7 @@ function App() {
       <button onClick={incrCounter}> {counter} +1</button>
       <br />
       <button onClick={decrCounter}>{counter} -1</button>
+      <button onClick={runMultiplesameFuncn}>{counter} -4</button>
     </>
   );
 }
