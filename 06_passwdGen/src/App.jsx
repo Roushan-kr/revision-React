@@ -10,7 +10,7 @@ function App() {
   // useRef hook
   const passwdRef = useRef(null);
 
-  // useCallback()-> use memeory cache to memorised value rither reruning whole code again and again it hust run that dependency instance
+  // useCallback()-> use memeory cache to memorised value rither reruning whole code again andcls again it hust run that dependency instance
   const passGentor = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
